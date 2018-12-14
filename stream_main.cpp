@@ -4,10 +4,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-// json config loader
-#include <rapidjson/document.h>
-#include <rapidjson/error/en.h>
-#include <rapidjson/istreamwrapper.h>
 // gst
 #include <gst/app/gstappsink.h>
 #include <gst/gst.h>
@@ -20,7 +16,7 @@ struct Camera {
           fps(6),
           width(1280),
           height(720),
-          address("rtsp://admin:admin@192.168.1.64:554") {}
+          address("rtsp://test:test@192.168.1.64:554") {}
     int id;
     int fps;
     int width;
@@ -345,7 +341,7 @@ int main(int argc, char **argv) {
     g_camera.width = 1920;
     g_camera.height = 1080;
     g_camera.address =
-        "rtsp://admin:admin@192.168.1.150:554/cam/"
+        "rtsp://test:test@192.168.1.64:554/cam/"
         "realmonitor?channel=1&subtype=0";
 
     // start gsteamer
